@@ -1,5 +1,8 @@
 <template>
   <div class="home">
+    <div>
+      <img class='hero' src="../assets/hero.png" width='400' >
+    </div>
     <div class="form">
       <h1>Create Account</h1>
       <label>Full name:</label>
@@ -16,6 +19,10 @@
 </template>
 
 <style lang="scss" scoped>
+.hero {
+  border-radius: 20px;
+  border: solid 3px gray;
+}
 .home {
   text-align: center;
   .form {
