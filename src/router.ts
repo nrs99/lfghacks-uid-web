@@ -25,7 +25,7 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ './views/Login.vue')
     },
     {
-      path: '/login/authorize',
+      path: '/authorize',
       //path: '/home/login/authorize',
         name: 'authorize',
          component: () => import('./views/Authorize.vue')
