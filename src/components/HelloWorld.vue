@@ -34,7 +34,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
 export default class HelloWorld extends Vue {
-  @Prop() private msg!: string;
+  @Prop() msg!: string;
 }
 </script>
 
@@ -55,3 +55,4 @@ a {
   color: #42b983;
 }
 </style>
+{"_id":"7d9fdf0e45803f65f7dcd39848648a94bf20cf590f8844129cc0e91297b363e358dffc2ca0c79f3fd2d1b3f096bc9c3cc94b8b20917d2f028f2ddafa6adb9177502ead28b2b65033374c665d5d79bbcd23c2fdc884012159c411eebe7897f311310247cd3075d3dc18791b8af21ad734d3ace2870265ed5a04972817f31fde71","accountId":"5c96f9df3f7d65f58cf75ee5","type":"user","created":"2019-03-24T03:30:39.180Z"}

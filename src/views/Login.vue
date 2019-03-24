@@ -1,21 +1,18 @@
 <template>
-  <div class="home">
+  <center><div class="login">
     <img alt="Vue logo" src="../assets/logo.png" style="width:300px;height:200px;">
     <!-- <HelloWorld v-bind:msg="message"/> -->
-    <br>Full name:
-    <input type="text" name="fullname" v-model="fullname">
-    <br>
+
     <br>Username:
     <input type="text" name="usrname" v-model="username">
     <br>Password:
     <input type="text" name="pswd" v-model="password">
-  
+    
 
-    <center><button type="submit" @click="createAccount" value="Submit">Create Account</button></center>
-     <a href="/Authorize.vue">Visit W3Schools</a> 
-    <!-- <button type="submit" @click="verifyAccount" value="Submit">Login</button> -->
+    <!-- <button type="submit" @click="createAccount" value="Submit">Create Account</button> -->
+    <center><button type="submit" @click="verifyAccount" value="Submit">Login</button></center>
 
-  </div>
+  </div></center>
 </template>
 
 <script lang="ts">
@@ -24,7 +21,7 @@ import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
 import axios from "axios";
 
 interface LoginResponse {
-  token: string
+  token:string
 }
 
 @Component({
@@ -32,8 +29,8 @@ interface LoginResponse {
     HelloWorld
   }
 })
-export default class CreateAccount extends Vue {
-  fullname = "";
+export default class Home extends Vue {
+  message = "Welcome to Your Vue.js +yoyoyo";
   username = "";
   password = "";
   createAccount() {
@@ -62,6 +59,7 @@ export default class CreateAccount extends Vue {
       .post<LoginResponse>("https://lfghacks.ngrok.io/login", body)
       .then(response => {
         console.log(response.data.token);
+        this.$router.push('/login/authorize');
       })
       .catch(error => {
         console.log(error);
